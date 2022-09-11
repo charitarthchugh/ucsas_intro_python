@@ -1,6 +1,8 @@
 ---
 marp: true
-title: Test MARP
+title: Introduction to Python
+author: Charitarth Chugh
+description: UCSAS 2022
 theme: gradient
 class: [blue]
 ---
@@ -21,7 +23,7 @@ class: [blue]
 
 ![bg right 60%](https://raw.githubusercontent.com/charitarthchugh/website/master/assets/images/myself.png)
 
-- Second Year Computer Scince Student at UConn
+- Second Year Computer Science Student at UConn
 
 ## Interests
 
@@ -45,10 +47,10 @@ Build really cool stuff related to deep learning!
 
 A device with Internet access
 
-### Getting set up:
+<!-- ### Getting set up:
 
 In the terminal, run
-`pip install -U numpy pandas matplotib seaborn`
+`pip install -U numpy pandas matplotib seaborn` -->
 
 ---
 
@@ -90,19 +92,54 @@ print("Workshop going good?")
 - Integer (`int`)
 - Float (`float`)
 - complex (`complex`)
+  - Ex. `1 +3j` where 3j is the complex component
 - Boolean (`bool`)
   - Difference here is true is `True` and false is `False`
 
 ---
-
-# Data
-
+<!-- _class: [blue,tinytext] -->
+# Data Types (continued)
 ## Strings
+- String is an array of bytes representing Unicode characters and thus elements can be accessed.
+- Multiline strings need three quotes and keep line breaks intact while printing.
+- Operators like + concatenates strings, in searches for membership
+- Commonly used methods:
 
-- Multiline Strings
+    - `replace("a", "b")`: replaces a with b in string
+    - `split()`: splits based on given separator 
+    - `upper()`, `lower()`, `strip()`, `capitalize()`, `casefold()`, 
+    - `count('a')`, `endswith()`, `startswith()`, `find()`, `index()`
+---
+# Data Types (continued)
+##  Lists & Tuples
+- 
 
 ---
+# Data Types (continued)
+## Sets 
+- Like a list, but cannot include duplicate elements
+- A set is not able to be indexed, so the only way to access the elements is to loop over it
+```python
+>>> a = {1, "2"}
 
+```
+---
+# Data Types (Continued)
+##  Dictionary
+- a `dict` is a mapped data type
+  - It consists of a key-value pair, where a key is used to access a value.  
+- The keys of a dictionary are immutable & duplicate keys will replace the original value, but the values themselves are mutable 
+```python
+>>> ucsas = {"workshop": "Introduction To Python", "year": 2022}
+>>> ucsas["workshop"]
+"Introduction To Python"
+>>> ucsas["year"]
+2022
+>>> ucsas.keys()
+["workshop", "year"]
+```
+
+---
 # Data Types
 
 - Obviously this is not an exhaustive list

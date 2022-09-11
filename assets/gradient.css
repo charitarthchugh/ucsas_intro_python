@@ -76,5 +76,5 @@ section.blue > header {
 section.tinytext > p,
 section.tinytext > ul,
 section.tinytext > blockquote {
-  font-size: 0.65em;
+  font-size: 0.8em;
 }
