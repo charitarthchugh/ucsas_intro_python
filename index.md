@@ -40,8 +40,7 @@ Build really cool stuff related to deep learning!
 - Python is a language with very diverse applications, from software development to research
 - The ecosystem of libraries and tools is awesome, which makes finding niche packages a breeze.
   - If you are not able to find anything that suits your needs, it is fairly easy to create a python package of your own as well.
-- ***
-
+---
 # Prerequisites:
 
 A device with Internet access
