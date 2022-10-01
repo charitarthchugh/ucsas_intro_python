@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "ucsas-intro-python"
+version = "0.1.0"
+description = "Intro To Python @ UCSAS 2022"
+authors = ["Charitarth Chugh <37895518+charitarthchugh@users.noreply.github.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "ucsas_intro_python"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pandas = "^1.5.0"
+numpy = "^1.23.3"
+notebook = "^6.4.12"
+
+[tool.poetry.group.dev.dependencies]
+black = {extras = ["jupyter"], version = "^22.8.0"}
+isort = "^5.10.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
