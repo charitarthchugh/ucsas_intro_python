@@ -1,0 +1,33 @@
+name: "release"
+
+on:
+  push:
+    branches:
+      - "main"
+jobs:
+  release: 
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: lts
+          cache: 'npm'
+      - name: Install marp
+        run: npm i -g @marp-team/marp-cli
+      - name: Get changed files
+        uses: tj-actions/changed-files@v24.1
+      - name: Make PDF
+        run: marp --theme assets/gradient.css --allow-local-files --pdf .
+      - name: Make PPTX
+        run: marp --theme assets/gradient.css --allow-local-files --pptx .
+      - if: steps.changed-files-specific.outputs.any_modified == 'true'
+        name: Commit-back changes
+        uses: swinton/commit@v2.0.0
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          files: ${{steps.changes.outputs.all_modified_files}}
+          commit-message:  "Build Presentation"
+        
