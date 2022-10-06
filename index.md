@@ -24,6 +24,7 @@ class: [blue]
 ![bg right 60%](https://raw.githubusercontent.com/charitarthchugh/website/master/assets/images/myself.png)
 
 - Second Year Computer Science Student at UConn
+- Secretary of UConn AI Club
 
 ## Interests
 
@@ -31,9 +32,9 @@ class: [blue]
 - Linux
 - Software Development
 
-## Aspirations:
+<!-- ## Aspirations:
 
-Build really cool stuff related to deep learning!
+Build really cool stuff related to deep learning! -->
 
 ---
 
@@ -42,7 +43,9 @@ Build really cool stuff related to deep learning!
 - Python is a language with very diverse applications, from software development to research
 - The ecosystem of libraries and tools is awesome, which makes finding niche packages a breeze.
   - If you are not able to find anything that suits your needs, it is fairly easy to create a python package of your own as well.
+
 ---
+
 # Prerequisites:
 
 A device with Internet access
@@ -68,7 +71,6 @@ In the terminal, run
 - Basic modules and their respective functions
   - `numpy`: Arrays, Universal Functions (Vectorized), Random numbers (Simulations)
   - `pandas`: DataFrames, Data Manipulation
-  - Miscellaneous
 
 ---
 
@@ -97,38 +99,110 @@ print("Workshop going good?")
   - Difference here is true is `True` and false is `False`
 
 ---
+
 <!-- _class: [blue,tinytext] -->
+
 # Data Types (continued)
+
 ## Strings
+
 - String is an array of bytes representing Unicode characters and thus elements can be accessed.
 - Multiline strings need three quotes and keep line breaks intact while printing.
 - Operators like + concatenates strings, in searches for membership
 - Commonly used methods:
 
-    - `replace("a", "b")`: replaces a with b in string
-    - `split()`: splits based on given separator 
-    - `upper()`, `lower()`, `strip()`, `capitalize()`, `casefold()`, 
-    - `count('a')`, `endswith()`, `startswith()`, `find()`, `index()`
----
-# Data Types (continued)
-##  Lists & Tuples
-- 
+  - `replace("a", "b")`: replaces a with b in string
+  - `split()`: splits based on given separator
+  - `upper()`, `lower()`, `strip()`, `capitalize()`, `casefold()`,
+  - `count('a')`, `endswith()`, `startswith()`, `find()`, `index()`
 
 ---
+
+## Sidenote: types of strings
+
+#### F-strings:
+
+```python
+f"{1+3j} is made up of a real component and a complex component"
+```
+
+- Makes it very easy to insert values and expressions into a string.
+- Very useful in print statements to see where your code is not working 🙂
+
+#### R-strings
+
+```python
+r"./practice.txt"
+```
+
+- Ensures that the contents of the string cannot be changed
+- Especially useful when you are working with files
+
+---
+
+# Practice time!
+
+## Q1: Manipulatin Strings,4 minutes
+
+### Try not to look things up
+
+---
+
 # Data Types (continued)
-## Sets 
+
+## Lists
+
+```python
+["a", 1, True]
+```
+
+- Can contain any type of elements & even a function.
+- Indexed and Ordered as a sequence.
+- Index starts at 0, like most programming languages
+- Elements can be accessed in the following ways: `x[0]`, `x[-1]`, `x[0:3]`, `x[:2]`, `x[2:]`
+- Elements can be modified using `x[1:2] = ["UCSAS", [1,2,3]]`
+- Methods: `len(x): length`, `x.insert(2, "Python")`, `x.append("Python")`, `x.remove([1, 2])`, `x.pop(1)`, `x.sort()`,`y = x.copy()`, `x.extend(y)`
+
+---
+
+# Data Types (continued)
+
+## Tuples
+
+```python
+(1, 2, [1, 2], 1, "abc")
+```
+
+- Created using `()`
+- Very similar to a list, but elements inside cannot be changed or be added (immutability)
+  - This means that for any change, a new tuple has to be created
+- Accessing items is similar to a list.
+- Methods: `len(x)`, `x.count("a")`, `x.index()`
+
+---
+
+# Data Types (continued)
+
+## Sets
+
 - Like a list, but cannot include duplicate elements
 - A set is not able to be indexed, so the only way to access the elements is to loop over it
+
 ```python
->>> a = {1, "2"}
+>>> a =  {1, "2"}
 
 ```
+
 ---
+
 # Data Types (Continued)
-##  Dictionary
+
+## Dictionary
+
 - a `dict` is a mapped data type
-  - It consists of a key-value pair, where a key is used to access a value.  
-- The keys of a dictionary are immutable & duplicate keys will replace the original value, but the values themselves are mutable 
+  - It consists of a key-value pair, where a key is used to access a value.
+- The keys of a dictionary are immutable & duplicate keys will replace the original value, but the values themselves are mutable
+
 ```python
 >>> ucsas = {"workshop": "Introduction To Python", "year": 2022}
 >>> ucsas["workshop"]
@@ -140,6 +214,7 @@ print("Workshop going good?")
 ```
 
 ---
+
 # Data Types
 
 - Obviously this is not an exhaustive list
@@ -166,10 +241,35 @@ print(w)
 
 ---
 
+# Practice time!
+
+## Q2: Manipulating lists
+
+### Try not to look things up
+
+---
+
+# Operators
+
+Arithmetic Operators:
+
+- add: `+`, subtract: `-`, multiply: `*`, division: `/`, modulus: `%`, exponentiation: `**`, floor division: `//`
+
+Assignment Operators:
+
+- equals: `=`, add and equal: `+=`, subtract and equal: `-=`, multiply and equal: `*=`, divide and equal: `/=`
+
+Comparison Operators:
+- value equality: `==`, value not equal: `!=`, value greater than: `>`, value less than: `<`, value greater than equal: `>=`, value less than equal: `<=`
+  
+Logical Operators: 
+- `and`, `or`, `not`
+
+---
+
 # Sidenote: Getting help in Python
 
-For any object, you can call the `dir()` function to see all the methods that it supports.
-Example:
+For any object, you can call the `dir()` function to see all the methods that it support
 
 ```python
 >>> dir(list)
