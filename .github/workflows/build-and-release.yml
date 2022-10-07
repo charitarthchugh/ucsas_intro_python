@@ -5,7 +5,7 @@ on:
     branches:
       - "main"
 jobs:
-  release: 
+  release:
     name: Release
     runs-on: ubuntu-latest
     steps:
@@ -13,15 +13,17 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: lts/*
-          cache: 'npm'
+          cache: "npm"
       - name: Install marp
         run: npm i -g @marp-team/marp-cli
+      - name: Setup Chrome
+        uses: browser-actions/setup-chrome@v0.0.0
       - name: Get changed files
         uses: tj-actions/changed-files@v24.1
       - name: Make PDF
-        run: marp --theme assets/gradient.css --allow-local-files --pdf .
+        run: marp --theme assets/gradient.css --allow-local-files --pdf index.md
       - name: Make PPTX
-        run: marp --theme assets/gradient.css --allow-local-files --pptx .
+        run: marp --theme assets/gradient.css --allow-local-files --pptx index.md
       - if: steps.changed-files-specific.outputs.any_modified == 'true'
         name: Commit-back changes
         uses: swinton/commit@v2.0.0
@@ -29,5 +31,4 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           files: ${{steps.changes.outputs.all_modified_files}}
-          commit-message:  "Build Presentation"
-        
+          commit-message: "Build Presentation"
