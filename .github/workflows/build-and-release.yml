@@ -5,8 +5,8 @@ on:
     branches:
       - "main"
 jobs:
-  release:
-    name: Release
+  build-and-commit:
+    name: Build and Commit
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -32,3 +32,4 @@ jobs:
         with:
           files: ${{steps.changes.outputs.all_modified_files}}
           commit-message: "Build Presentation"
+  
