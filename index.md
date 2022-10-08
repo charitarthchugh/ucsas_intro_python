@@ -264,7 +264,33 @@ Comparison Operators:
   
 Logical Operators: 
 - `and`, `or`, `not`
+---
+# Conditionals (If, elif, else)
+- The conditionals should be based on a logical input such as ==, >=, >, <, <=, is, is not, in, not in.
+- They can be written in one line if the statement has only one statement.
+- An if statement cannot be empty. If it has to be, use pass
+- If condition are to result in more than two cases, use elif
+  and or can be used for the conditional.
+- At the end of the condition to verify, use a : and then if a new line is used, use indentation.
+---
+# Conditionals (continued) 
 
+```python
+## checking three scores and using `and`.
+a, b, c = 55, 60, 90
+
+if a > b and a > c:
+    print('a is first')
+elif a < b and b < c:
+        print('c is first')
+else: print('b is first')
+
+## checking between two scores in one line
+a, b = 55, 70
+
+print('a is first') if a > b else print('b is first')
+
+```
 ---
 
 # Sidenote: Getting help in Python
