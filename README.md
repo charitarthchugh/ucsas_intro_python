@@ -5,7 +5,8 @@ marp: false
 
 ## Get the materials
 
-All located in the root of this repository.
+[Slides](./index.pdf)  
+[Practice Notebook](./practice.ipynb)
 
 ## Running locally
 
