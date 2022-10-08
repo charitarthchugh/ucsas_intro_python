@@ -14,7 +14,11 @@ jobs:
         with:
           node-version: lts/*
           cache: "npm"
+      - name: Colab Badge Action
+        uses: trsvchn/colab-badge-action@v4
+
       - name: Install marp
+
         run: npm i -g @marp-team/marp-cli
       - name: Setup Chrome
         uses: browser-actions/setup-chrome@v0.0.0
