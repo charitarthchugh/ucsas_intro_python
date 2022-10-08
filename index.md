@@ -260,20 +260,27 @@ Assignment Operators:
 - equals: `=`, add and equal: `+=`, subtract and equal: `-=`, multiply and equal: `*=`, divide and equal: `/=`
 
 Comparison Operators:
+
 - value equality: `==`, value not equal: `!=`, value greater than: `>`, value less than: `<`, value greater than equal: `>=`, value less than equal: `<=`
-  
-Logical Operators: 
-- `and`, `or`, `not`
+
+Logical Operators:
+
+- `and`, `or`, `not`, `in`
+
 ---
+
 # Conditionals (If, elif, else)
+
 - The conditionals should be based on a logical input such as ==, >=, >, <, <=, is, is not, in, not in.
 - They can be written in one line if the statement has only one statement.
 - An if statement cannot be empty. If it has to be, use pass
 - If condition are to result in more than two cases, use elif
   and or can be used for the conditional.
 - At the end of the condition to verify, use a : and then if a new line is used, use indentation.
+
 ---
-# Conditionals (continued) 
+
+# Conditionals (continued)
 
 ```python
 ## checking three scores and using `and`.
@@ -282,8 +289,9 @@ a, b, c = 55, 60, 90
 if a > b and a > c:
     print('a is first')
 elif a < b and b < c:
-        print('c is first')
+    print('c is first')
 else: print('b is first')
+
 
 ## checking between two scores in one line
 a, b = 55, 70
@@ -291,8 +299,97 @@ a, b = 55, 70
 print('a is first') if a > b else print('b is first')
 
 ```
+
 ---
 
+# Loops
+
+## While loop
+
+- It runs as long as a condition is true. Careful as it can run into an infinte loop if condition never gets satisfied.
+- `break` and `continue` allows to either break or continue based on a condition within the loop.
+
+```python
+num = 9380949384209
+count = 0
+while num!=0:
+  if num < 0:
+    break
+  else:
+    continue
+  num %= 10
+  count += 1
+```
+
+---
+
+# Loops
+## For loop
+- Used to iterate over a sequence.
+- `range()` function is useful as it gives a list of integers to iterate over
+```python
+x = ['usual', 'usual', 'usual', 'amazing', 'usual', 'usual', 'exit']
+count = 0
+for i in range(len(x)):
+    if x[i] == 'usual':
+        count += 1
+print(count)
+
+count = 0
+for temp in x:
+    if temp == 'usual':
+        count += 1 
+print(count)
+```
+---
+# Functions and scope
+- A function is defined using keywords def followed by the function name and arguments within parenthesis.
+- A function should either print or return some value. Else pass should be used to avoid error.
+- Often when we use functions to obtain values and store them in another variable, we need a return statement.
+
+---
+- Scope: A variable created inside a function has only local scope which means it can only be used inside the function. It can be accessed by another function if it is within the previous function.
+- A variable created in the main body has global scope. A global scope variable can be created inside a function using the keyword global
+
+- A lambda is a small anonymous function which returns the result in the same line (a useful property).
+```python
+def fib(n):
+    if (n==1 or n==2):
+        return 1
+    else:
+        return fib(n - 1) + fib(n - 2)
+```
+---
+#  Classes
+- A class is a blueprint for objects
+- It defines ways to initiate an object of the made up class, functions for various properties, methods, etc.
+- init(self, x, y) is a function that exists for all classes - to initiate values to the class.
+- Methods are defined for the object class using functions with parameter self and more within the class.
+---
+```python
+class Gene:
+    def __init__(self, creationid, creationseq):
+        self.id = creationid
+        self.seq = creationseq
+    
+    def length(self):
+        return(str(len(self.seq)))
+    
+    # search for first instance
+    def search(self, searchseq):
+        return(self.seq.find(searchseq))
+
+print('''
+Gene Object: Length and search
+''')
+
+x = Gene(11, 'AGTCATCGAACTG')
+print(f'Gene length:{x.length()}')
+print(f"Gene search for AA:{x.search('AA')}")
+print(type(x))
+```
+
+---
 # Sidenote: Getting help in Python
 
 For any object, you can call the `dir()` function to see all the methods that it support
@@ -312,3 +409,8 @@ sorted(iterable, /, *, key=None, reverse=False)
     A custom key function can be supplied to customize the sort order, and the
     reverse flag can be set to request the result in descending order.
 ```
+---
+# Practice!  
+
+## Q3: Catalan numbers!
+---
