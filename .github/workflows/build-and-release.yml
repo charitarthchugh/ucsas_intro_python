@@ -26,6 +26,8 @@ jobs:
         run: marp --theme assets/gradient.css --allow-local-files --pdf index.md
       - name: Make PPTX
         run: marp --theme assets/gradient.css --allow-local-files --pptx index.md
+      - name: Make HTML
+        run:  marp --theme assets/gradient.css --allow-local-files --html xindex.md
       - id: changed-files
         name: Get changed files
         uses: tj-actions/changed-files@v24.1
