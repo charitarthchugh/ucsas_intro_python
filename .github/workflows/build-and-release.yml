@@ -18,12 +18,12 @@ jobs:
         run: npm i -g @marp-team/marp-cli
       - name: Setup Chrome
         uses: browser-actions/setup-chrome@v0.0.0
-      - name: Get changed files
-        uses: tj-actions/changed-files@v24.1
       - name: Make PDF
         run: marp --theme assets/gradient.css --allow-local-files --pdf index.md
       - name: Make PPTX
         run: marp --theme assets/gradient.css --allow-local-files --pptx index.md
+      - name: Get changed files
+        uses: tj-actions/changed-files@v24.1
       - if: steps.changed-files-specific.outputs.any_modified == 'true'
         name: Commit-back changes
         uses: swinton/commit@v2.0.0
