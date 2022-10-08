@@ -40,7 +40,9 @@ Build really cool stuff related to deep learning! -->
 
 # Why Python?
 
-- Python is a language with very diverse applications, from software development to research
+- Python is a language with very diverse applications, from
+  software development to research
+- As a language, it is easy to understand because there is an emphasis on readability.
 - The ecosystem of libraries and tools is awesome, which makes finding niche packages a breeze.
   - If you are not able to find anything that suits your needs, it is fairly easy to create a python package of your own as well.
 
@@ -48,7 +50,7 @@ Build really cool stuff related to deep learning! -->
 
 # Prerequisites:
 
-A device with Internet access
+A device with Internet access, preferably a laptop
 
 <!-- ### Getting set up:
 
@@ -142,9 +144,10 @@ r"./practice.txt"
 
 # Practice time!
 
-## Q1: Manipulatin Strings,4 minutes
+## Q1: Manipulating Strings, 4 minutes
 
 ### Try not to look things up
+### https://link.charitarth.dev/ucsas-practice
 
 ---
 
@@ -245,7 +248,7 @@ print(w)
 
 ## Q2: Manipulating lists
 
-### Try not to look things up
+### 5 min
 
 ---
 
@@ -323,10 +326,13 @@ while num!=0:
 
 ---
 
-# Loops
+# Loops (Continued)
+
 ## For loop
+
 - Used to iterate over a sequence.
 - `range()` function is useful as it gives a list of integers to iterate over
+
 ```python
 x = ['usual', 'usual', 'usual', 'amazing', 'usual', 'usual', 'exit']
 count = 0
@@ -338,50 +344,63 @@ print(count)
 count = 0
 for temp in x:
     if temp == 'usual':
-        count += 1 
+        count += 1
 print(count)
 ```
+
 ---
+
 # Functions and scope
+
 - A function is defined using keywords def followed by the function name and arguments within parenthesis.
 - A function should either print or return some value. Else pass should be used to avoid error.
 - Often when we use functions to obtain values and store them in another variable, we need a return statement.
-
----
-- Scope: A variable created inside a function has only local scope which means it can only be used inside the function. It can be accessed by another function if it is within the previous function.
-- A variable created in the main body has global scope. A global scope variable can be created inside a function using the keyword global
-
 - A lambda is a small anonymous function which returns the result in the same line (a useful property).
+
 ```python
 def fib(n):
-    if (n==1 or n==2):
-        return 1
-    else:
-        return fib(n - 1) + fib(n - 2)
+    if (n==1 or n==2) return 1
+    else return fib(n - 1) + fib(n - 2)
 ```
+
 ---
-#  Classes
+#
+
+- Scope: A variable created inside a function has only local scope which means it can only be used inside the function. It can be accessed by another function if it is within the previous function.
+- A variable created in the main body has global scope.
+
+---
+
+# Practice 3
+
+## Catalan Numbers
+
+https://link.charitarth.dev/ucsas-practice
+---
+
+# Classes
+
 - A class is a blueprint for objects
 - It defines ways to initiate an object of the made up class, functions for various properties, methods, etc.
 - init(self, x, y) is a function that exists for all classes - to initiate values to the class.
 - Methods are defined for the object class using functions with parameter self and more within the class.
+
 ---
+
 ```python
 class Gene:
     def __init__(self, creationid, creationseq):
         self.id = creationid
         self.seq = creationseq
-    
+
     def length(self):
         return(str(len(self.seq)))
-    
+
     # search for first instance
     def search(self, searchseq):
         return(self.seq.find(searchseq))
 
-print('''
-Gene Object: Length and search
-''')
+print('Gene Object: Length and search')
 
 x = Gene(11, 'AGTCATCGAACTG')
 print(f'Gene length:{x.length()}')
@@ -390,6 +409,7 @@ print(type(x))
 ```
 
 ---
+
 # Sidenote: Getting help in Python
 
 For any object, you can call the `dir()` function to see all the methods that it support
@@ -410,7 +430,6 @@ sorted(iterable, /, *, key=None, reverse=False)
     reverse flag can be set to request the result in descending order.
 ```
 ---
-# Practice!  
-
-## Q3: Catalan numbers!
----
+# Important References
+- W3Schools
+- 
