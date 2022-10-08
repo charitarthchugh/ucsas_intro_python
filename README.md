@@ -1,3 +1,6 @@
+---
+marp: false
+---
 # Introduction To Python workshop at UCSAS 2022
 
 ## Get the materials
