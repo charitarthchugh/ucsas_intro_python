@@ -374,6 +374,7 @@ def fib(n):
 # Practice 3
 
 ## Catalan Numbers
+## 6 minutes
 
 https://link.charitarth.dev/ucsas-practice
 ---
@@ -382,7 +383,7 @@ https://link.charitarth.dev/ucsas-practice
 
 - A class is a blueprint for objects
 - It defines ways to initiate an object of the made up class, functions for various properties, methods, etc.
-- init(self, x, y) is a function that exists for all classes - to initiate values to the class.
+- __init__(self, parameters) is a function that exists for all classes - to initiate values to the class.
 - Methods are defined for the object class using functions with parameter self and more within the class.
 
 ---
@@ -402,7 +403,10 @@ class Gene:
 
 print('Gene Object: Length and search')
 
-x = Gene(11, 'AGTCATCGAACTG')
+x = Gene(11, 'AGTCATCGA# Important References
+- W3Schools
+- FreeCodeCamp
+# AcACTG')
 print(f'Gene length:{x.length()}')
 print(f"Gene search for AA:{x.search('AA')}")
 print(type(x))
@@ -430,6 +434,18 @@ sorted(iterable, /, *, key=None, reverse=False)
     reverse flag can be set to request the result in descending order.
 ```
 ---
-# Important References
+# Practice 4
+## Getting Area
+### https://link.charitarth.dev/ucsas-practice
+---
+# Thank you for having me!
+## Resources:
 - W3Schools
-- 
+- FreeCodeCamp
+# Acknowledgements 
+- Thank you to Dr. Yan for letting me do this presentation
+- Thank you to Venkata Patchigolla for giving me the opportunity to do this presentation!
+
+---
+# https://charitarth.dev
+# Email me at contact@charitarth.dev if you have any questions!
