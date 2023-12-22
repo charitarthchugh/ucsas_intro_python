@@ -3,8 +3,8 @@ marp: true
 title: Introduction to Python
 author: Charitarth Chugh
 description: UCSAS 2022
-theme: gradient
-class: [blue]
+theme: rose-pine
+# class: [blue]
 ---
 
 <!-- _class: lead -->
@@ -13,7 +13,7 @@ class: [blue]
 
 # Introduction to Python
 
-## UCSAS 2022
+## UCSAS 2024
 
 ### Charitarth Chugh
 
@@ -23,8 +23,8 @@ class: [blue]
 
 ![bg right 60%](https://raw.githubusercontent.com/charitarthchugh/website/master/assets/images/myself.png)
 
-- Second Year Computer Science Student at UConn
-- Secretary of UConn AI Club
+- 3rd Year Computer Science Student at UConn
+- President of UConn AI Club
 
 ## Interests
 
@@ -45,12 +45,13 @@ Build really cool stuff related to deep learning! -->
 - As a language, it is easy to understand because there is an emphasis on readability.
 - The ecosystem of libraries and tools is awesome, which makes finding niche packages a breeze.
   - If you are not able to find anything that suits your needs, it is fairly easy to create a python package of your own as well.
+- The only place where Python is potentially not used is when speed is critical. 
 
 ---
 
 # Prerequisites:
 
-A device with Internet access, preferably a laptop
+A device with Internet access, preferably a laptop. 
 
 <!-- ### Getting set up:
 
@@ -59,7 +60,6 @@ In the terminal, run
 
 ---
 
-<!-- _class: [blue,tinytext] -->
 
 # What we will be covering today!
 
@@ -125,7 +125,9 @@ print("Workshop going good?")
 #### F-strings:
 
 ```python
-f"{1+3j} is made up of a real component and a complex component"
+>>> f"{} is 3"
+
+"3 is 3"
 ```
 
 - Makes it very easy to insert values and expressions into a string.
@@ -137,7 +139,7 @@ f"{1+3j} is made up of a real component and a complex component"
 r"./practice.txt"
 ```
 
-- Ensures that the contents of the string cannot be changed
+- Ensures that the contents of the strings is treated as-is (no escape characters for example)
 - Especially useful when you are working with files
 
 ---
@@ -193,7 +195,6 @@ r"./practice.txt"
 
 ```python
 >>> a =  {1, "2"}
-
 ```
 
 ---
@@ -207,7 +208,7 @@ r"./practice.txt"
 - The keys of a dictionary are immutable & duplicate keys will replace the original value, but the values themselves are mutable
 
 ```python
->>> ucsas = {"workshop": "Introduction To Python", "year": 2022}
+>>> ucsas = "{"workshop": "Introduction To Python", "year": 2022}
 >>> ucsas["workshop"]
 "Introduction To Python"
 >>> ucsas["year"]
@@ -215,6 +216,11 @@ r"./practice.txt"
 >>> ucsas.keys()
 ["workshop", "year"]
 ```
+---
+# Data Types (Continued)
+## Duck Typing & Type enforcment
+- Python does not do data type checking. 
+- It behaves on the principle: "If it walks like a duck and quacks like a duck, then it must be a duck"
 
 ---
 
@@ -350,7 +356,7 @@ print(count)
 
 ---
 
-# Functions and scope
+# Functions
 
 - A function is defined using keywords def followed by the function name and arguments within parenthesis.
 - A function should either print or return some value. Else pass should be used to avoid error.
@@ -364,7 +370,7 @@ def fib(n):
 ```
 
 ---
-#
+# Scope
 
 - Scope: A variable created inside a function has only local scope which means it can only be used inside the function. It can be accessed by another function if it is within the previous function.
 - A variable created in the main body has global scope.
@@ -377,6 +383,7 @@ def fib(n):
 ## 6 minutes
 
 https://link.charitarth.dev/ucsas-practice
+
 ---
 
 # Classes
