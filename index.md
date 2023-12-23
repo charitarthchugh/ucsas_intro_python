@@ -70,10 +70,6 @@ In the terminal, run
   - Mapping (`dict`)
   - Sets (`sets`, `frozenset`)
 - Conditions, Loops and Functions
-- Basic modules and their respective functions
-  - `numpy`: Arrays, Universal Functions (Vectorized), Random numbers (Simulations)
-  - `pandas`: DataFrames, Data Manipulation
-
 ---
 
 # Syntax
@@ -218,7 +214,7 @@ r"./practice.txt"
 ```
 ---
 # Data Types (Continued)
-## Duck Typing & Type enforcment
+## Duck Typing & type enforcement
 - Python does not do data type checking. 
 - It behaves on the principle: "If it walks like a duck and quacks like a duck, then it must be a duck"
 
@@ -451,7 +447,7 @@ sorted(iterable, /, *, key=None, reverse=False)
 - FreeCodeCamp
 # Acknowledgements 
 - Thank you to Dr. Yan for letting me do this presentation
-- Thank you to Venkata Patchigolla for giving me the opportunity to do this presentation!
+
 
 ---
 # https://charitarth.dev
