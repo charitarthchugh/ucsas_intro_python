@@ -30,7 +30,7 @@ jobs:
         run:  marp --theme assets/gradient.css --allow-local-files --html xindex.md
       - id: changed-files
         name: Get changed files
-        uses: tj-actions/changed-files@v24.1
+        uses: tj-actions/changed-files@v41
         with:
           separator: '\n'
       - if: steps.changed-files-specific.outputs.any_modified == 'true'
