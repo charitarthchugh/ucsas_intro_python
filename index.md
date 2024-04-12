@@ -488,6 +488,7 @@ conda activate -n env_name
 ---
 # Example Projects! 
 - [Exo-EDA](https://github.com/charitarthchugh/exo-eda/blob/main/exo-eda.ipynb)
+- [bookie](https://github.com/charitarthchugh/bookie)
 
 ---
 # Thank you for having me!
