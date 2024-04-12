@@ -70,6 +70,8 @@ In the terminal, run
   - Mapping (`dict`)
   - Sets (`sets`, `frozenset`)
 - Conditions, Loops and Functions
+- Python Packages and Virtual Environments
+- 
 ---
 
 # Syntax
@@ -440,6 +442,54 @@ sorted(iterable, /, *, key=None, reverse=False)
 # Practice 4
 ## Getting Area
 ### https://link.charitarth.dev/ucsas-practice
+---
+# Python Packaging and Virtual Environments
+---
+## Packaging and Package Managers
+### Packages
+In Python, a package is a collection of modules grouped together to organize and structure code. It allows for better code management, reuse, and distribution.
+
+### Package Manager  
+
+- A package manager is a tool that automates the process of installing, upgrading, configuring, and removing software packages. In Python, popular package managers include pip and conda (Anaconda). 
+- They streamline the installation and management of Python libraries and dependencies.
+- Pip generally comes with a standard Python installation, while conda is its own python distribution and needs to be installed separately
+---
+## Example: Installing Pandas
+### Pip
+```sh
+pip install pandas
+```
+### Conda
+```sh
+conda install pandas
+```
+---
+
+## Python Virtual Environments
+- Self-contained directory that encapsulates a Python interpreter along with its associated libraries and scripts. 
+- It enables developers to create isolated environments for different projects, each with its own dependencies and versions of Python packages. 
+- This isolation prevents conflicts between packages and ensures project reproducibility across different environments. 
+- Some common ways of creating virtual environments are conda and venv
+---
+## Creating Virtual Environment
+### Venv
+```sh
+python -m venv venv
+# Using virtual environmants
+source venv/bin/activate #Unix
+venv\Scripts\activate.ps1 #Windows
+```
+### Conda
+```sh
+conda create -n env_name
+conda activate -n env_name
+```
+---
+# Example Projects! 
+- [Exo-EDA](https://github.com/charitarthchugh/exo-eda/blob/main/exo-eda.ipynb)
+- [bookie](https://github.com/charitarthchugh/bookie)
+
 ---
 # Thank you for having me!
 ## Resources:
