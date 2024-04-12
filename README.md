@@ -3,12 +3,9 @@ marp: false
 ---
 # Introduction To Python workshop at UCSAS 2022
 
-## Get the materials
+[Get the materials](https://github.com/charitarthchugh/ucsas_intro_python/releases/latest)
 
-[Slides](./index.pdf)  
-[Practice Notebook](./practice.ipynb)
-
-## Running locally
+## Reproducing the presentation
 
 ### Setting up the Jupyter Notebook
 
