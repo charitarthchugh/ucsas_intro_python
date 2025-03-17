@@ -13,7 +13,7 @@ theme: rose-pine
 
 # Introduction to Python
 
-## UCSAS 2024
+## CSAS 2024
 
 ### Charitarth Chugh
 
@@ -23,14 +23,13 @@ theme: rose-pine
 
 ![bg right 60%](https://raw.githubusercontent.com/charitarthchugh/website/master/assets/images/myself.png)
 
-- 3rd Year Computer Science Student at UConn
+- 4th Year Mathematics-Statistics Student at UConn
 - President of UConn AI Club
 
 ## Interests
 
-- Deep Learning
-- Linux
-- Software Development
+- Efficient Deep Learning
+- Adversarial Deep Learning
 
 <!-- ## Aspirations:
 
@@ -45,13 +44,15 @@ Build really cool stuff related to deep learning! -->
 - As a language, it is easy to understand because there is an emphasis on readability.
 - The ecosystem of libraries and tools is awesome, which makes finding niche packages a breeze.
   - If you are not able to find anything that suits your needs, it is fairly easy to create a python package of your own as well.
-- The only place where Python is potentially not used is when speed is critical. 
+- The only place where Python is potentially not used is when speed is critical.
 
 ---
 
+![bg left 90%](./assets/tennis.png)
+---
 # Prerequisites:
 
-A device with Internet access, preferably a laptop. 
+A device with Internet access, preferably a laptop.
 
 <!-- ### Getting set up:
 
@@ -60,31 +61,28 @@ In the terminal, run
 
 ---
 
-
 # What we will be covering today!
 
-- Python Syntax (Variables, Indentation, Comments)
-- Data Types and Methods
+- Basic Syntax (Variables, Indentation, Comments)
+- Data Types
   - Strings (`str`)
   - Numerical types (`int`, `float`, `complex`)
   - Mapping (`dict`)
-  - Sets (`sets`, `frozenset`)
-- Conditions, Loops and Functions
+- Conditions, Loops, and Functions
 - Python Packages and Virtual Environments
-- 
+
 ---
 
 # Syntax
 
 - To comment a line, prefix it with a `#`
-- In Python, a new line indicates a start of a new command
+- In Python, a newline indicates a start of a new command
 
 ```python
 # Print Hello, UCSAS
-print("Hello, UCSAS!")
+print("Hello, CSAS!")
 
 print("Workshop going good?")
-
 ```
 
 ---
@@ -110,7 +108,6 @@ print("Workshop going good?")
 - Multiline strings need three quotes and keep line breaks intact while printing.
 - Operators like + concatenates strings, in searches for membership
 - Commonly used methods:
-
   - `replace("a", "b")`: replaces a with b in string
   - `split()`: splits based on given separator
   - `upper()`, `lower()`, `strip()`, `capitalize()`, `casefold()`,
@@ -123,9 +120,9 @@ print("Workshop going good?")
 #### F-strings:
 
 ```python
->>> f"{} is 3"
+>>> f"\{3} is 3"
 
-"3 is 3"
+"\3 is 3"
 ```
 
 - Makes it very easy to insert values and expressions into a string.
@@ -147,6 +144,7 @@ r"./practice.txt"
 ## Q1: Manipulating Strings, 4 minutes
 
 ### Try not to look things up
+
 ### https://link.charitarth.dev/ucsas-practice
 
 ---
@@ -184,24 +182,11 @@ r"./practice.txt"
 
 ---
 
-# Data Types (continued)
-
-## Sets
-
-- Like a list, but cannot include duplicate elements
-- A set is not able to be indexed, so the only way to access the elements is to loop over it
-
-```python
->>> a =  {1, "2"}
-```
-
----
-
 # Data Types (Continued)
 
 ## Dictionary
 
-- a `dict` is a mapped data type
+- A `dict` is a mapped data type
   - It consists of a key-value pair, where a key is used to access a value.
 - The keys of a dictionary are immutable & duplicate keys will replace the original value, but the values themselves are mutable
 
@@ -214,10 +199,14 @@ r"./practice.txt"
 >>> ucsas.keys()
 ["workshop", "year"]
 ```
+
 ---
+
 # Data Types (Continued)
+
 ## Duck Typing & type enforcement
-- Python does not do data type checking. 
+
+- Python does not do data type checking.
 - It behaves on the principle: "If it walks like a duck and quacks like a duck, then it must be a duck"
 
 ---
@@ -280,10 +269,9 @@ Logical Operators:
 
 - The conditionals should be based on a logical input such as ==, >=, >, <, <=, is, is not, in, not in.
 - They can be written in one line if the statement has only one statement.
-- An if statement cannot be empty. If it has to be, use pass
+- An if statement cannot be empty. If it has to be, use `pass`
 - If condition are to result in more than two cases, use elif
   and or can be used for the conditional.
-- At the end of the condition to verify, use a : and then if a new line is used, use indentation.
 
 ---
 
@@ -368,6 +356,7 @@ def fib(n):
 ```
 
 ---
+
 # Scope
 
 - Scope: A variable created inside a function has only local scope which means it can only be used inside the function. It can be accessed by another function if it is within the previous function.
@@ -378,6 +367,7 @@ def fib(n):
 # Practice 3
 
 ## Catalan Numbers
+
 ## 6 minutes
 
 https://link.charitarth.dev/ucsas-practice
@@ -388,7 +378,7 @@ https://link.charitarth.dev/ucsas-practice
 
 - A class is a blueprint for objects
 - It defines ways to initiate an object of the made up class, functions for various properties, methods, etc.
-- __init__(self, parameters) is a function that exists for all classes - to initiate values to the class.
+- **init**(self, parameters) is a function that exists for all classes - to initiate values to the class.
 - Methods are defined for the object class using functions with parameter self and more within the class.
 
 ---
@@ -438,67 +428,196 @@ sorted(iterable, /, *, key=None, reverse=False)
     A custom key function can be supplied to customize the sort order, and the
     reverse flag can be set to request the result in descending order.
 ```
+
 ---
+
 # Practice 4
+
 ## Getting Area
+
 ### https://link.charitarth.dev/ucsas-practice
+
 ---
+
 # Python Packaging and Virtual Environments
+
 ---
+
 ## Packaging and Package Managers
+
 ### Packages
+
 In Python, a package is a collection of modules grouped together to organize and structure code. It allows for better code management, reuse, and distribution.
 
-### Package Manager  
+### Package Manager
 
-- A package manager is a tool that automates the process of installing, upgrading, configuring, and removing software packages. In Python, popular package managers include pip and conda (Anaconda). 
+- A package manager is a tool that automates the process of installing, upgrading, configuring, and removing software packages. In Python, popular package managers include pip and conda (Anaconda).
 - They streamline the installation and management of Python libraries and dependencies.
 - Pip generally comes with a standard Python installation, while conda is its own python distribution and needs to be installed separately
+
 ---
+
 ## Example: Installing Pandas
+
 ### Pip
+
 ```sh
 pip install pandas
 ```
+
 ### Conda
+
 ```sh
 conda install pandas
 ```
+
 ---
 
 ## Python Virtual Environments
-- Self-contained directory that encapsulates a Python interpreter along with its associated libraries and scripts. 
-- It enables developers to create isolated environments for different projects, each with its own dependencies and versions of Python packages. 
-- This isolation prevents conflicts between packages and ensures project reproducibility across different environments. 
+
+- Self-contained directory that encapsulates a Python interpreter along with its associated libraries and scripts.
+- It enables developers to create isolated environments for different projects, each with its own dependencies and versions of Python packages.
+- This isolation prevents conflicts between packages and ensures project is reproducible across different environments.
 - Some common ways of creating virtual environments are conda and venv
+
 ---
+
 ## Creating Virtual Environment
+
 ### Venv
+
 ```sh
 python -m venv venv
 # Using virtual environmants
-source venv/bin/activate #Unix
-venv\Scripts\activate.ps1 #Windows
+source venv/bin/activate # Unix
+venv\Scripts\activate.ps1 # Windows
 ```
+
 ### Conda
+
 ```sh
 conda create -n env_name
 conda activate -n env_name
 ```
+
 ---
-# Example Projects! 
-- [Exo-EDA](https://github.com/charitarthchugh/exo-eda/blob/main/exo-eda.ipynb)
-- [bookie](https://github.com/charitarthchugh/bookie)
+
+# Core libraries for Sports Analytics
+
+## NumPy, Pandas, and Matplotib
+
+---
+
+# NumPy
+
+- A library for working with arrays/vectors.
+- Efficiently stores and manipulates numerical data.
+- Boasts fast matrix operations on entire arrays
+
+---
+## NumPy Example
+```py
+import numpy as np
+# Create a 2D NumPy array representing basketball player statistics
+player_stats = np.array([
+    [20, 5, 3, 1.80],  # Player 1: Points, Rebounds, Assists, Height
+    [15, 8, 2, 1.90],  # Player 2
+    [25, 6, 4, 1.85],  # Player 3
+    [18, 7, 3, 1.75]   # Player 4
+])
+# Accessing elements
+print("\nPoints scored by Player 2:", player_stats[1, 0])  # Row 1, Column 0
+# Calculating the average points scored
+average_points = np.mean(player_stats[:, 0])  # All rows, column 0
+print("\nAverage Points Scored:", average_points)
+# Calculating the average height
+average_height = np.mean(player_stats[:, 3])
+print("Average Height:", average_height)
+# Finding the maximum rebounds
+max_rebounds = np.max(player_stats[:, 1])
+print("Maximum Rebounds:", max_rebounds)
+# Calculating the total points for all players
+total_points = np.sum(player_stats[:, 0])
+print("Total Points Scored by all players:", total_points)
+```
+---
+## Pandas
+- Library for working with tables of data (not at scale!)
+- Organize, clean, analyze data easily
+- Can read files
+---
+## Pandas Example
+```py
+import pandas as pd
+# Create a DataFrame
+data = {
+    'Date': ['2024-01-15', '2024-01-18', '2024-01-20', '2024-01-22', '2024-01-25'],
+    'Team': ['Lakers', 'Lakers', 'Celtics', 'Celtics', 'Warriors'],
+    'Opponent': ['Clippers', 'Warriors', 'Lakers', 'Heat', 'Celtics'],
+    'Points Scored': [110, 105, 120, 95, 115],
+    'Points Allowed': [100, 98, 105, 90, 110]
+}
+df = pd.DataFrame(data)
+# Calculate a new column: Point Differential
+df.iloc[:,'Point Differential'] = df['Points Scored'] - df['Points Allowed']
+print("\nDataFrame with Point Differential:\n", df)
+# Filter the DataFrame to show only Lakers games
+lakers_games = df[df['Team'] == 'Lakers']
+print("\nLakers Games:\n", lakers_games)
+# Filter for games where the point differential is greater than 10
+high_scoring_games = df[df['Point Differential'] > 10]
+print("\nHigh Scoring Games (Point Differential > 10):\n", high_scoring_games)
+# Calculate the average points scored by the Lakers
+average_lakers_points = df[df['Team'] == 'Lakers']['Points Scored'].mean()
+print("\nAverage Points Scored by the Lakers:", average_lakers_points)
+# Group by team and calculate the average points scored
+average_points_by_team = df.groupby('Team')['Points Scored'].mean()
+print("\nAverage Points Scored by Team:\n", average_points_by_team)
+```
+---
+## Matplotib and Seaborn
+---
+## Maplotlib and Seaborn Example
+```py
+# Using the data from above
+# Create a bar chart using Matplotlib
+plt.figure(figsize=(8, 6))  # Adjust figure size
+plt.bar(average_points_by_team.index, average_points_by_team.values)
+plt.xlabel("Team")
+plt.ylabel("Average Points Scored")
+plt.title("Average Points Scored by Team")
+plt.show()
+
+# Create a scatter plot
+plt.figure(figsize=(8, 6))
+plt.scatter(df['Points Scored'], df['Points Allowed'])
+plt.xlabel("Points Scored")
+plt.ylabel("Points Allowed")
+plt.title("Points Scored vs. Points Allowed")
+plt.show()
+```
+---
+<table>
+  <tr>
+    <td><img src="assets/matplotlib1.png" alt="Image 1"></td>
+    <td><img src="assets/matplotlib2.png" alt="Image 2"></td>
+  </tr>
+</table>
 
 ---
 # Thank you for having me!
+
 ## Resources:
+
 - W3Schools
 - FreeCodeCamp
-# Acknowledgements 
+
+# Acknowledgements
+
 - Thank you to Dr. Yan for letting me do this presentation
 
-
 ---
+
 # https://charitarth.dev
+
 # Email me at contact@charitarth.dev if you have any questions!
